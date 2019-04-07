@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class FlowerEntity implements Comparable<FlowerEntity> {
 
-    enum FlowerType {
+    enum FlowerName {
         Amaryllis,
         Begonia,
         Crocus,
@@ -15,23 +15,20 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
         Sunflower,
         Jonquil;
 
-        //public void setFlowerType(FlowerType type){flowerType = type;        }
+        //public void setFlowerName(FlowerName type){flowerName = type;        }
 
-        public static FlowerType getRandomType() {
+        public static FlowerName getRandomType() {
             Random random = new Random();
             return values()[random.nextInt(values().length)];
         }
     }
 
-    private FlowerType flowerType;
-    private String itemStatus = "Active";
-    private int distance;
-    private int distToSchool;
+    private FlowerName flowerName;
     private Integer price;
     private boolean status;
 
-    public FlowerEntity(FlowerType flowerType, int distance, Integer price, boolean status) {
-        this.flowerType = flowerType;
+    public FlowerEntity(FlowerName flowerName, Integer price) {
+        this.flowerName = flowerName;
         this.price = price;
         this.status = status;
     }
@@ -39,25 +36,12 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
     public FlowerEntity() {
     }
 
-    public int getDistToSchool() {
-        return distToSchool;
+    public FlowerName getFlowerName() {
+        return flowerName;
     }
 
-
-    public String getItemStatus() {
-        return itemStatus;
-    }
-
-    public void setItemStatus(String itemStatus) {
-        this.itemStatus = itemStatus;
-    }
-
-    public FlowerType getFlowerType() {
-        return flowerType;
-    }
-
-    public void setFlowerType(FlowerType flowerType) {
-        this.flowerType = flowerType;
+    public void setFlowerName(FlowerName flowerName) {
+        this.flowerName = flowerName;
     }
 
     public Integer getPrice() {
@@ -68,25 +52,13 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
         this.price = price;
     }
 
-    public int getDistance() {
-        return distance;
-    }
-
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
     @Override
     public String toString() {
-        return "Rent [price=" + price + "]";
+        return "Flower [price=" + price + "]";
     }
 
     @Override
     public int compareTo(FlowerEntity o) {
-        return 0;
+        return this.getPrice().compareTo(o.getPrice());
     }
 }

@@ -84,10 +84,6 @@ public class DataCreator {
         iterationPrint(allFlowersInfo);
     }
 
-    public void bouqetCreator(){
-
-    }
-
     public void iterationPrint(List<FlowerEntity> entityList){
         for (Iterator<FlowerEntity> it = entityList.iterator(); it.hasNext(); ) {
             FlowerEntity flowerEntity = it.next();

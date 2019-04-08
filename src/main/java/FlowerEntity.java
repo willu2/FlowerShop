@@ -17,7 +17,7 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
         Sunflower,
         Jonquil;
 
-        //public void setFlowerName(FlowerName type){flowerName = type;        }
+        //public void setVazonName(VazonName type){flowerName = type;        }
 
         public static FlowerName getRandomType() {
             Random random = new Random();
@@ -38,12 +38,12 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
     public FlowerEntity() {
     }
 
-    public FlowerName getFlowerName() {
+    public FlowerName getVazonName() {
         return flowerName;
     }
 
-    public void setFlowerName(FlowerName flowerName) {
-        this.flowerName = flowerName;
+    public void setVazonName(FlowerName vazonName) {
+        this.flowerName = vazonName;
     }
 
     public Integer getPrice() {

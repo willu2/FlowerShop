@@ -6,7 +6,7 @@ public class MenuBuillder {
 
     public void mainManu(){
         System.out.println("Menu :> ");
-        System.out.println(" 1 :> Show all flowers ");
+        System.out.println(" 1 :> Show all stuffs ");
         System.out.println(" 2 :> Show all bouquets  >>> ");
         System.out.println(" 3 :> Createte bouquet  >>> ");
         //System.out.println(" 4 :> Show by price >>> ");
@@ -17,13 +17,13 @@ public class MenuBuillder {
 
    /* public void flowersShow(){
         System.out.println("What flower bouquet do you want: ");
-        for (int i = 0; i < FlowerEntity.FlowerName.values().length; i++){
-            System.out.println((i+1) + " :> " + FlowerEntity.FlowerName.values()[i] + "  |");
+        for (int i = 0; i < FlowerEntity.VazonName.values().length; i++){
+            System.out.println((i+1) + " :> " + FlowerEntity.VazonName.values()[i] + "  |");
         }
     }
 
     public void flowersShowBouqet(int i, int counts){
-            System.out.println((i+1) + " :> " + FlowerEntity.FlowerName.values()[i] + "  |");
+            System.out.println((i+1) + " :> " + FlowerEntity.VazonName.values()[i] + "  |");
         }
 */
 

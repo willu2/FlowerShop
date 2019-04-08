@@ -5,15 +5,27 @@ public class DataCreator {
     public List allFlowersInfo;// = new ArrayList<FlowerEntity>();
     public FlowerEntity entity;
 
+    public List allVazone;// = new ArrayList<FlowerEntity>();
+    public VazonItem vazonItem;
+
     public DataCreator() {
         allFlowersInfo = new ArrayList<FlowerEntity>();
+        allVazone = new ArrayList<VazonItem>();
         createFlowersPrice();
+        createVazonePrice();
     }
 
     private void createFlowersPrice(){
         for (int i = 0; i < FlowerEntity.FlowerName.values().length; i++){
             entity = new FlowerEntity(FlowerEntity.FlowerName.values()[i], ranDig(40));
             allFlowersInfo.add(entity);
+        }
+    }
+
+    private void createVazonePrice(){
+        for (int i = 0; i < VazonItem.VazonName.values().length; i++){
+            vazonItem = new VazonItem(VazonItem.VazonName.values()[i], ranDig(30));
+            allVazone.add(vazonItem);
         }
     }
 
@@ -44,6 +56,13 @@ public class DataCreator {
         for (Iterator<FlowerEntity> it = allFlowersInfo.iterator(); it.hasNext(); ) {
             FlowerEntity flowerEntity = it.next();
             printItemList(flowerEntity);
+        }
+    }
+    public void showAllVazes(){
+        sortItemList();
+        for (Iterator<VazonItem> it = allVazone.iterator(); it.hasNext(); ) {
+            VazonItem vazonItem = it.next();
+            printVazoneItem(vazonItem);
         }
     }
 
@@ -78,21 +97,28 @@ public class DataCreator {
 
 
     private void printItemList(FlowerEntity flowerEntity){
-        System.out.print("Flower name:  > " + flowerEntity.getFlowerName());
+        System.out.print("Flower name:  > " + flowerEntity.getVazonName());
         //System.out.print(" ||_type: > " + flowerEntity.getStoneType());
         System.out.print(" ||_price: > " + flowerEntity.getPrice() + " $");
         System.out.println();
     }
 
+    private void printVazoneItem(VazonItem vazonItem){
+        System.out.print("Vazone:  > " + vazonItem.getVazonName());
+        //System.out.print(" ||_type: > " + flowerEntity.getStoneType());
+        System.out.print(" ||_price: > " + vazonItem.getPrice() + " $");
+        System.out.println();
+    }
+
     private void printBouquet(FlowerEntity flowerEntity, int counts){
-        System.out.print("Bouquet:  > " + flowerEntity.getFlowerName());
+        System.out.print("Bouquet:  > " + flowerEntity.getVazonName());
         //System.out.print(" ||_type: > " + flowerEntity.getStoneType());
         System.out.print(" ||_price: > " + flowerEntity.getPrice() * counts + " $");
         System.out.println();
     }
 
     private void printBouqetList(FlowerEntity flowerEntity){
-        System.out.print("Flower name: 5 > " + flowerEntity.getFlowerName());
+        System.out.print("Flower name: 5 > " + flowerEntity.getVazonName());
         //System.out.print(" ||_type: > " + flowerEntity.getStoneType());
         System.out.print(" ||_price: > " + (flowerEntity.getPrice() * 5) + " $");
         System.out.println();

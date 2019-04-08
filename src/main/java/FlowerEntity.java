@@ -2,6 +2,8 @@ import java.util.Random;
 
 public class FlowerEntity implements Comparable<FlowerEntity> {
 
+    //flowerpot
+
     enum FlowerName {
         Amaryllis,
         Begonia,

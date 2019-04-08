@@ -7,25 +7,37 @@ public class MenuBuillder {
     public void mainManu(){
         System.out.println("Menu :> ");
         System.out.println(" 1 :> Show all flowers ");
-        System.out.println(" 2 :> Show by clarity  >>> ");
-        System.out.println(" 3 :> Show by price >>> ");
-        System.out.println(" 4 :> Show hierarchy >>> ");
-        System.out.println(" 5 :> Sort by price >>> ");
+        System.out.println(" 2 :> Show all bouquets  >>> ");
+        System.out.println(" 3 :> Createte bouquet  >>> ");
+        //System.out.println(" 4 :> Show by price >>> ");
         System.out.println(" 8 :> Exit ");
 
         System.out.println("Enter position :> ");
     }
 
-    public void flowersShow(){
-        System.out.println("Enter flower: ");
+   /* public void flowersShow(){
+        System.out.println("What flower bouquet do you want: ");
         for (int i = 0; i < FlowerEntity.FlowerName.values().length; i++){
-            System.out.print((i+1) + " :> "+FlowerEntity.FlowerName.values()[i] + " |*|");
+            System.out.println((i+1) + " :> " + FlowerEntity.FlowerName.values()[i] + "  |");
         }
     }
-    public void typeShow(){
+
+    public void flowersShowBouqet(int i, int counts){
+            System.out.println((i+1) + " :> " + FlowerEntity.FlowerName.values()[i] + "  |");
+        }
+*/
+
+    public void bouqetMenu(){
         System.out.println("Enter value: ");
-        System.out.print(" 1 :> PRECIOS |*|");
-        System.out.println(" 2 :> HALFPRECIOUS |*|");
+        System.out.println(" 1 :> ADD Flower ");
+        System.out.println(" 2 :> Remove Flower ");
+    }
+
+    public void enterNumberMenu(){
+        System.out.println("Enter number of flower: ");
+    }
+    public void yourBouqet(){
+        System.out.println("Your bouqet: ");
     }
 
     public void priceEnter(){

@@ -1,3 +1,5 @@
+package flower.vbn.com;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,15 +24,6 @@ public class MenuBuillder {
 
     public void enterNumberMenu(){
         System.out.println("Enter number of flower: ");
-    }
-
-
-    public void priceEnter(){
-        System.out.println("Enter your money count:");
-    }
-
-    public void sortShow(){
-        System.out.println("Sort by price:");
     }
 
     public int menuTotalPriceEnter(){

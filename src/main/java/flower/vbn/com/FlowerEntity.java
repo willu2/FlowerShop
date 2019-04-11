@@ -1,3 +1,5 @@
+package flower.vbn.com;
+
 import java.util.Random;
 
 public class FlowerEntity implements Comparable<FlowerEntity> {
@@ -16,8 +18,6 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
         Statice,
         Sunflower,
         Jonquil;
-
-        //public void setVazonName(VazonName type){flowerName = type;        }
 
         public static FlowerName getRandomType() {
             Random random = new Random();
@@ -42,16 +42,8 @@ public class FlowerEntity implements Comparable<FlowerEntity> {
         return flowerName;
     }
 
-    public void setVazonName(FlowerName vazonName) {
-        this.flowerName = vazonName;
-    }
-
     public Integer getPrice() {
         return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     @Override
